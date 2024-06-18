@@ -9,11 +9,11 @@ public class Main {
     public static boolean isArrayCube(int[][] matrix) {
         int sum1 = 0;
         int sum2 = 0;
-        int length = 0;
+        int length;
         int count = 0;
         for(int[] row : matrix){
            sum1++;
-           for(int column : row){
+           for(int ignored : row){
                sum2++;
            }
         }
@@ -27,10 +27,6 @@ public class Main {
                 System.out.println(true);
             }
         }
-        if(sum1 == sum2/sum1 && count == 0){
-            return true;
-        }else{
-            return false;
-        }
+        return sum1 == sum2 / sum1 && count == 0;
     }
 }
